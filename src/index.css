@@ -84,7 +84,8 @@ p {
 .answer-block h2 {
     font-size: 1.5rem;
     margin: 2rem;
-    color:rgb(200, 200,200)
+    color:white;
+    text-align: justify;
 }
 
 .answer-block img {

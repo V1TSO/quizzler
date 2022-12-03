@@ -16,6 +16,9 @@ const AnswerBlock = ({ answerOptions, chosenAnswers, answer }) => {
     if (result != null)
         return (
             <div id='answer-block' className='answer-block'  >
+                <h1>Ai Generated Photo</h1>
+                <h2>Coming soon...</h2>
+                <h1>Ai Generated Description</h1>
                 <h2>{result}</h2>
 
             </div>
