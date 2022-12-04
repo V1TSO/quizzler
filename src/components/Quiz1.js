@@ -5,8 +5,6 @@ import AnswerBlock from "./AnswerBlock";
 import axios from "axios";
 import { Box } from '@mui/material/'
 
-import Typography from '@mui/material/Typography';
-
 const App = () => {
   const [quiz, setQuiz] = useState(null);
   const [chosenAnswerItems, setChosenAnswerItems] = useState([]);

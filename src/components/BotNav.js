@@ -7,6 +7,7 @@ import RestoreIcon from '@mui/icons-material/Restore';
 import { useState, useEffect, useCallback } from 'react'
 import { useLocation, Link } from 'react-router-dom';
 
+
 const BotNav = (theme) => {
     const [value, setValue] = useState(null);
 
@@ -28,7 +29,13 @@ const BotNav = (theme) => {
                 showLabels
                 value={value}
                 onChange={handleChange}
-                sx={{ position: 'fixed', bottom: 0, width: 1, left: 0 }}
+                sx={{
+                    position: 'fixed',
+                    bottom: 0,
+                    width: 1,
+                    left: 0
+
+                }}
             >
                 <BottomNavigationAction label="Home" icon={<HomeIcon />} component={Link} to="/" />
                 <BottomNavigationAction label="Quizzes" icon={<RestoreIcon />} component={Link} to="/hub" />

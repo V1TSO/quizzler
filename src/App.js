@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import { createTheme } from '@mui/material/styles/';
 import { ThemeProvider } from '@mui/material/styles/';
 import About from './components/About'
+import { Box } from '@mui/material/'
 
 function App() {
 
@@ -39,16 +40,18 @@ function App() {
     return (
         <>
             <ThemeProvider theme={theme}>
-                <Routes>
-                    <Route path="/hub" element={<QuizesHub />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/1" element={<Quiz1 />} />
-                    <Route exact path="/" element={<Landing />} />
-                    <Route path="*" element={<Landing />} />
-                </Routes>
-                <BotNav
-                    theme={theme}
-                />
+                <Box marginBottom='10rem'>
+                    <Routes>
+                        <Route path="/hub" element={<QuizesHub />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/1" element={<Quiz1 />} />
+                        <Route exact path="/" element={<Landing />} />
+                        <Route path="*" element={<Landing />} />
+                    </Routes>
+                    <BotNav
+                        theme={theme}
+                    />
+                </Box>
             </ThemeProvider>
         </>
     )

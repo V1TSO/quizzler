@@ -17,9 +17,9 @@ const About = () => {
                 <Avatar
                     alt="Vicente Renasco"
                     src="https://images.unsplash.com/photo-1436891620584-47fd0e565afb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-                    sx={{ width: 100, height: 100 }}
+                    sx={{ width: 30, height: 30 }}
                 />
-                <Typography paddingTop='1.25rem' variant="h5" color="text.primary" marginBottom='3rem'>Made with ❤️ by Vicente Renasco</Typography>
+                <Typography paddingTop='0.3rem' variant="h8" color="text.primary" marginBottom='3rem'>Made with ❤️ by Vicente Renasco</Typography>
             </Stack>
         </Box>
     );

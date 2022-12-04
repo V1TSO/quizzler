@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 const Landing = () => {
     return (
-        <Box marginLeft='1rem' marginRight='1rem' marginTop='20rem' textAlign='center' >
+        <Box marginLeft='1rem' marginRight='1rem' marginTop='12rem' textAlign='center' >
             <Typography variant="h2" color="text.primary" marginBottom='1rem' fontWeight='bold'>Quizzler</Typography>
             <Link to="/hub" className='link'>
                 <Button variant="contained" >
