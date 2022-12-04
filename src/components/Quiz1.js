@@ -14,7 +14,7 @@ const App = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:8000/quiz");
+      const response = await fetch("https://v1tso.github.io/quizzler-json-server/db.json");
       const json = await response.json();
       setQuiz(json);
     }
