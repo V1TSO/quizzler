@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import QuestionsBlock from "./QuestionsBlock";
 import AnswerBlock from "./AnswerBlock";
 import axios from "axios";
+import { Box } from '@mui/material/'
+
+import Typography from '@mui/material/Typography';
 
 const App = () => {
   const [quiz, setQuiz] = useState(null);
@@ -65,7 +68,7 @@ const App = () => {
           setAnswer(response.data);
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
         });
     }
   }
@@ -74,26 +77,28 @@ const App = () => {
 
 
   return (
-    <div className="quiz">
-      <Title title={quiz?.title} subtitle={quiz?.subtitle} />
-      {quiz?.content?.map(contentItem => (
-        <QuestionsBlock
-          key={contentItem.id}
-          quizItem={contentItem}
-          setChosenAnswerItems={setChosenAnswerItems}
-          chosenAnswerItems={chosenAnswerItems}
-          unansweredQuestionsIds={unansweredQuestionsIds}
-          setUnansweredQuestionsIds={setUnansweredQuestionsIds}
-        />
-      ))}
-      {showAnswer && (
-        <AnswerBlock
-          answerOptions={quiz?.answers}
-          chosenAnswers={chosenAnswerItems}
-          answer={answer}
-        />
-      )}
-    </div>
+    <Box marginLeft='1rem' marginRight='1rem' marginTop='2rem' marginBottom='4rem' >
+      <div className="quiz">
+        <Title title={quiz?.title} subtitle={quiz?.subtitle} />
+        {quiz?.content?.map(contentItem => (
+          <QuestionsBlock
+            key={contentItem.id}
+            quizItem={contentItem}
+            setChosenAnswerItems={setChosenAnswerItems}
+            chosenAnswerItems={chosenAnswerItems}
+            unansweredQuestionsIds={unansweredQuestionsIds}
+            setUnansweredQuestionsIds={setUnansweredQuestionsIds}
+          />
+        ))}
+        {showAnswer && (
+          <AnswerBlock
+            answerOptions={quiz?.answers}
+            chosenAnswers={chosenAnswerItems}
+            answer={answer}
+          />
+        )}
+      </div>
+    </Box>
   );
 }
 

@@ -1,9 +1,10 @@
 import QuestionBlock from "./QuestionBlock";
+import Typography from '@mui/material/Typography';
 
 const QuestionsBlock = ({ quizItem, setChosenAnswerItems, chosenAnswerItems, setUnansweredQuestionsIds, unansweredQuestionsIds }) => {
     return (
         <>
-            <h2 h2 id={quizItem.id} className='question-title' > {quizItem.text}</h2>
+            <Typography variant="h4" id={quizItem.id} className='question-title' > {quizItem.text}</Typography>
             <div className='questions-container'>
                 {quizItem.questions.map((question, _index) => (
                     <QuestionBlock
